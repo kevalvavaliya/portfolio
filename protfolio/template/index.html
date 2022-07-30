@@ -264,7 +264,7 @@
                     </div>
                 </div>
 
-
+                <!--MY JOURNEY-->
                 <div class="my-journey-outer" data-aos="fade-up" data-aos-duration="2000">
                     <div class="my-journey-inner">
                         <div class="my-journey-title">
@@ -333,10 +333,69 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="journey-line-outer line3">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                                    enable-background="new 0 0 3.2 364.3" version="1.1" viewBox="0 0 3.2 364.3"
+                                    xml:space="preserve">
+                                    <path fill="none" stroke="#1A1A1A" stroke-miterlimit="10" stroke-width="3"
+                                        d="M1.7 217.4c0 29-.1 58-.2 86.8M1.7 0c0 29-.1 58-.2 86.8M1.5 364.3c0-9.7.1-19.4.2-29M1.6 128.6c0-6.4.1-12.8.1-19.1M1.5 196.9c0-15.9.1-31.9.2-47.6"
+                                        style="stroke-dashoffset: 0px;"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!--MY SKILL SET-->
+                <div class="my-skill-set-outer">
+                    <div class="my-skill-set-inner">
+                        <div class="my-skill-set-title">
+                            <h1>My Skill Set and<br> Technologies </h1>
+                            <div class="pen-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="pen" x="0" y="0"
+                                    enable-background="new 0 0 56.75 57.94" version="1.1" viewBox="0 0 56.75 57.94"
+                                    xml:space="preserve">
+                                    <g fill="#FFF" stroke="#1A1A1A" stroke-miterlimit="10" stroke-width="4.5">
+                                        <path d="M37.49 3.71H49.78V22.52H37.49z"
+                                            transform="rotate(-45.001 43.637 13.117)"></path>
+                                        <path
+                                            d="M1.66 49.91L8.62 21.53 32.64 10.81 46.31 24.48 35.22 48.14 7.89 56.25z">
+                                        </path>
+                                        <path d="M21.92 34.84L4.54 52.21"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="my-skill-set-text-content">
+                            <p> I write clean, well-commented, composable and functional code, without language barriers
+                                as I can adapt and learn any new technology very quickly.</p>
+                            <span>Here are some of the tech tools, frameworks, libraries and languages I’m great at-
+                            </span>
+                        </div>
+                        <div class="line4">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" enable-background="new 0 0 3.2 364.3"
+                                version="1.1" viewBox="0 0 3.2 364.3" xml:space="preserve">
+                                <path fill="none" stroke="#1A1A1A" stroke-miterlimit="10" stroke-width="3"
+                                    d="M1.7 217.4c0 29-.1 58-.2 86.8M1.7 0c0 29-.1 58-.2 86.8M1.5 364.3c0-9.7.1-19.4.2-29M1.6 128.6c0-6.4.1-12.8.1-19.1M1.5 196.9c0-15.9.1-31.9.2-47.6"
+                                    style="stroke-dashoffset: 0px;"></path>
+                            </svg>
+                        </div>
+                        <div class="skills-container-outer">
+                            <div class="skills-container-inner">
+                                {% for skill in skills %}
+                                    <div class="skill-item">
+                                        <div class="skill-icon">
+                                            <img src="/static/{{skill.icon}}" height="100%" width="100%"/>
+                                        </div>
+                                        <div class="skill-text">
+                                            <span>{{skill.name}}</span>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {% endblock %}
             </div>
         </div>

@@ -680,7 +680,7 @@ p:nth-child(2) {
 
 .journey-line-outer {
     max-width: 0.25em;
-    margin-left: 3vw;
+    margin-left: 52px;
 }
 
 .line1 {
@@ -709,7 +709,6 @@ p:nth-child(2) {
     color: #f2f2f2;
     background-color: var(--primary);
     transition: 0.2s;
-    margin-left: 10px;
 }
 
 .resume-inner:hover {
@@ -775,8 +774,7 @@ p:nth-child(2) {
 .line3 {
     max-height: 10rem;
     overflow: hidden;
-    margin-left: 2vw;
-    color: var(--primary);
+    margin-left: 30px;
 }
 
 .my-journey-card-outer {
@@ -848,3 +846,98 @@ h3 {
 .j-card4 {
     transform: rotate(-20deg);
 }
+
+
+/* MY SKILL SET */
+.my-skill-set-outer{
+    width: 100%;
+    margin-bottom: 200px;
+}
+.my-skill-set-inner{
+    padding-top: 34px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.my-skill-set-title{
+    width: max-content;
+    position: relative;
+    font-size: 30px;
+    font-family: 'Amatic SC';
+    font-weight: 900;
+    margin-top: 14px;
+}
+.pen-svg{
+    z-index: -1;
+    position: absolute;
+    top: 40px;
+    right: -39px;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8e00;
+    animation: pensvg 2s linear 0s infinite alternate forwards;
+}
+@keyframes pensvg {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+.pen-svg>svg{
+    width: 40px;
+}
+.my-skill-set-text-content{
+    margin-top: 30px;
+    width: 80%;
+    font-family: 'Gotham';
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.my-skill-set-text-content>p{
+    margin-bottom: 10px;
+}
+.line4 {
+    margin-left: 110px;
+    max-height: 1.8rem;
+    overflow: hidden;
+    max-width: 0.25em;
+}
+.skills-container-outer{
+    width: 100%;
+    margin-top: 10px;
+}
+.skills-container-inner{
+    width: 85%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.skill-icon{
+    height: 2.2em;
+    width: 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-item{
+    width: max-content;
+    padding: 10px 28px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 4px;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    font-weight: 450;
+    justify-content: center;
+}
+
