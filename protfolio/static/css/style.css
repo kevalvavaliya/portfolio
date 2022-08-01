@@ -815,7 +815,7 @@ p:nth-child(2) {
 }
 
 .journey-year>h2,
-h3 {
+.journey-year>h3 {
     color: var(--colorTextBody);
 }
 
@@ -851,7 +851,9 @@ h3 {
 /* MY SKILL SET */
 .my-skill-set-outer{
     width: 100%;
-    margin-bottom: 200px;
+    margin-bottom: 120px;
+    height: max-content;
+    padding-bottom: 10px;
 }
 .my-skill-set-inner{
     padding-top: 34px;
@@ -941,3 +943,179 @@ h3 {
     justify-content: center;
 }
 
+/*-------------------- MY PROJECTS -------------------------*/
+
+.my-project-outer{
+    width: 100%;
+    height: max-content;
+    margin-bottom: 200px;
+
+}
+.my-project-inner{
+    padding: 0px 20px;
+}
+.my-project-title{
+    padding: 10px 0px;
+}
+.my-project-title-text{
+    width: 100%;
+}
+.my-project-title-text>h1{
+    font-family: 'Gotham';
+    font-size: 40px;
+    margin-bottom: 6px;
+    color: var(--black);
+}
+
+.my-project-title-text>span{
+    font-family: 'Gotham';
+    font-size: 18px;
+    color: var(--primary);
+}
+.my-project-content{
+    width: 100%;
+    margin-top:30px ;
+    position: relative;
+}
+.project-slider-item{
+    display: flex;
+    width: 100%;
+    gap:5%;
+}
+.project-text-outer{
+    width: 40%;
+    display: flex;
+}
+.my-project-content-inner{
+    display: flex;
+    width: 100%;
+}
+.project-text-number{
+    font-family: 'NoeDisplay';
+    font-size: 32px;
+    display: flex;
+    gap: 10px;
+    height: max-content;
+    padding: 0px 12px;
+}
+.prj-num-up{
+    position: relative;
+    width: max-content;
+}
+.prj-num-up::after{
+    content: '/';
+    font-size: 60px;
+    position: absolute;
+    top: 29px;
+    color: var(--primary);
+    right: -35px;
+    font-family: 'Anurati';
+}
+.prj-num-down{
+    align-self: flex-end;
+    font-size: 28px;
+}
+.line6{
+    margin-left: 110px;
+    max-height: 3.8rem;
+    overflow: hidden;
+    max-width: 0.25em;
+}
+.project-text-desc{
+    width: auto;
+    flex-grow: 1;
+}
+.project-desc-inner{
+    padding:12px;
+}
+.proj-title{
+    text-transform: capitalize;
+    font-size: 1.8em;
+    color: var(--primary);
+    font-family: sans-serif;
+    font-weight: 450;
+}
+.prj-tech{
+    text-transform: capitalize;
+    font-family: 'Gotham';
+    font-size: 1.6em;
+    color: var(--black);
+}
+.prj-text{
+    margin-top: 50px;
+    font-family: 'Gotham';
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #616161;
+    font-size: 22px;
+}
+.project-image-outer{
+    width: 50%;
+
+}
+.project-image-inner{
+    width: 100%;
+    height: 450px;
+    border: 0.5px solid #000;
+}
+.prj-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.prj-image>img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+#prjslider .owl-nav button.owl-prev{
+    width: 3.3em;
+    height: 3.1em;
+    border-radius: 100em;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    background: var(--primary);
+    font-size: 30px;
+    color: #fff;
+    top: 45%;
+    left: 42%;
+}
+#prjslider .owl-nav button.owl-next{
+    width: 3.3em;
+    height: 3.1em;
+    border-radius: 100em;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    background: var(--primary);
+    font-size: 30px;
+    color: #fff;
+    top: 45%;
+    right: 32px;
+}
+.my-project-content::after{
+    content: '';
+    background-image: url('../image/dash.png');
+    height: 300px;
+    width: 437px;
+    background-position-x: -54px;
+    background-size: cover;
+    position: absolute;
+    top: 65%;
+    z-index: 99;
+    right: -2%;
+}
+.prj-animate{
+        transition: 0.2s;
+        animation: prjanim 1s ease 0s 1 normal forwards;
+}
+@keyframes prjanim{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(30deg);
+    }
+}

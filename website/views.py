@@ -21,6 +21,7 @@ def index(request):
         {"name": "JQuery", "icon": "icons/kevalvavaliya-jquery.svg"},
         {"name": "Google Cloud", "icon": "icons/kevalvavaliya-googlecloud.svg"},
         {"name": "Dart", "icon": "icons/kevalvavaliya-dart.svg"},
+        {"name":"Wordpress", "icon":"icons/kevalvavaliya-wordpress.svg"}
     ]
     data={
         "skills":skills
