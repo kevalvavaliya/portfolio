@@ -969,7 +969,7 @@ p:nth-child(2) {
 
 .my-project-title-text>span{
     font-family: 'Gotham';
-    font-size: 18px;
+    font-size: 20px;
     color: var(--primary);
 }
 .my-project-content{
@@ -1057,7 +1057,7 @@ p:nth-child(2) {
 .project-image-inner{
     width: 100%;
     height: 450px;
-    border: 0.5px solid #000;
+    /* border: 0.5px solid #000; */
 }
 .prj-image{
     height: 100%;
@@ -1079,8 +1079,8 @@ p:nth-child(2) {
     background: var(--primary);
     font-size: 30px;
     color: #fff;
-    top: 45%;
-    left: 42%;
+    top: 40%;
+    left: 44%;
 }
 #prjslider .owl-nav button.owl-next{
     width: 3.3em;
@@ -1092,20 +1092,21 @@ p:nth-child(2) {
     background: var(--primary);
     font-size: 30px;
     color: #fff;
-    top: 45%;
-    right: 32px;
+    top: 40%;
+    right: 70px;
+    z-index: 999;
 }
 .my-project-content::after{
     content: '';
     background-image: url('../image/dash.png');
     height: 300px;
     width: 437px;
-    background-position-x: -54px;
+    background-position-x: -25px;
     background-size: cover;
     position: absolute;
     top: 65%;
     z-index: 99;
-    right: -2%;
+    right: 1%;
 }
 .prj-animate{
         transition: 0.2s;
