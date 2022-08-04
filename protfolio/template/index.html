@@ -49,7 +49,6 @@
             </div>
         </div>
         <div class="loading-bar">
-            <span>bar</span>
         </div>
     </div>
 
@@ -59,8 +58,8 @@
         <!--navbar-->
         {% block header %}
         <div class="top-navigation">
-            <div class="kevalogo">
-                <span class="logo">K</span>
+            <div class="kevalogo" onclick="location.href = '#home';">
+                <span class="logo">{{yourname|make_list|first}}</span>
             </div>
             <div class="hamburger-nav">
                 <div id='menu'>
@@ -74,28 +73,28 @@
             <div class="navbar-main">
                 <div class="nav-items">
                     <div class="nav-item" data-cursor="pointer">
-                        <a href="#" class="navlink">
+                        <a href="#home" class="navlink">
                             <span>
                                 Home
                             </span>
                         </a>
                     </div>
                     <div class="nav-item" data-cursor="pointer">
-                        <a href="#" class="navlink">
+                        <a href="#about" class="navlink">
                             <span>
                                 About
                             </span>
                         </a>
                     </div>
                     <div class="nav-item" data-cursor="pointer">
-                        <a href="#" class="navlink">
+                        <a href="#project" class="navlink">
                             <span>
                                 Projects
                             </span>
                         </a>
                     </div>
                     <div class="nav-item" data-cursor="pointer">
-                        <a href="#" class="navlink">
+                        <a href="#contact" class="navlink">
                             <span>
                                 Contact
                             </span>
@@ -104,7 +103,7 @@
                 </div>
                 <div class="nav-social-icons">
                     <div class="nav-icon-item" data-cursor="pointer">
-                        <a href="#" class="nav-icon">
+                        <a href="{{social_links.0.socialURL}}" class="nav-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                 viewBox="0 0 24 24" style=" fill:#000000;">
                                 <path
@@ -114,7 +113,7 @@
                         </a>
                     </div>
                     <div class="nav-icon-item" data-cursor="pointer">
-                        <a href="#" class="nav-icon">
+                        <a href="{{social_links.1.socialURL}}" class="nav-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                 viewBox="0 0 30 30" style=" fill:#000000;">
                                 <path
@@ -124,7 +123,7 @@
                         </a>
                     </div>
                     <div class="nav-icon-item" data-cursor="pointer">
-                        <a href="#" class="nav-icon">
+                        <a href="{{social_links.2.socialURL}}" class="nav-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                 viewBox="0 0 50 50" style=" fill:#000000;">
                                 <path
@@ -134,9 +133,9 @@
                         </a>
                     </div>
                     <div class="nav-icon-item" data-cursor="pointer">
-                        <a href="#" class="nav-icon">
+                        <a href="{{social_links.3.socialURL}}" class="nav-icon">
                             <div class="nav-icon-item">
-                                <a href="#" class="nav-icon">
+                                <a href="{{social_links.3.socialURL}}" class="nav-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                         viewBox="0 0 30 30" style=" fill:#000000;">
                                         <path
@@ -157,10 +156,10 @@
 
         <div class="right-content-main">
             <div class="right-content">
-                <div class="right-content-home">
+                <div class="right-content-home" id="home">
                     <div class="main-text-container">
                         <div class="top-text">
-                            <span>KEVAL VAVALIYA</span>
+                            <span>{{yourname}}</span>
                         </div>
 
                         <div class="bottom-text">
@@ -177,15 +176,11 @@
 
                         <div class="bottom-animated-text">
                             <ul class="entries">
+                                {% for way in whatareyou %}
                                 <li class="entry">
-                                    <h2>+Designer</h2>
+                                    <h2>+{{way}}</h2>
                                 </li>
-                                <li class="entry">
-                                    <h2>+Programmer</h2>
-                                </li>
-                                <li class="entry">
-                                    <h2>+Reader</h2>
-                                </li>
+                                {% endfor %}
                             </ul>
                             <div class="bottom-text-slider2"></div>
                         </div>
@@ -210,21 +205,17 @@
 
                 <!--------------ABOUT------------------>
 
-                <div class="about-main">
+                <div class="about-main" id="about">
                     <div class="about-inner" data-aos="fade-up" data-aos-duration="2000">
                         <div class="about-text">
                             <div class="about-text-title">
                                 <h2>Hi there</h2>
                             </div>
                             <div class="about-text-content">
-                                <p>I’m Keval, I am Full Stack Web Developer and App developer located in India.I am
-                                    currently pursuing Bachelor of engineering in Information Technology at LDCE. I
-                                    consider myself as a maker of things, who solves user-problems using design and/or
-                                    technology.</p>
+                                <p>{{aboutpara1}}</p>
                             </div>
                             <div class="about-text-content">
-                                <p>I like to work with new tools and technologies,I’m always down for hearing about new
-                                    projects, so feel free to drop me a line.</p>
+                                <p>{{aboutpara2}}</p>
                             </div>
                             <div class="journey-line-outer line1">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" enable-background="new 0 0 3.2 301"
@@ -262,14 +253,14 @@
                             <span>About Me</span>
                         </div>
                         <div class="about-image">
-                            <img src="{% static 'image/kevalvavaliya.jpg' %}">
+                            <img src="/static/{{aboutimage}}">
                             <div class="bottom-text-slider"></div>
                         </div>
                     </div>
                 </div>
 
                 <!--MY JOURNEY-->
-                <div class="my-journey-outer" data-aos="fade-up" data-aos-duration="2000">
+                <div class="my-journey-outer" data-aos="fade-up" data-aos-duration="1000">
                     <div class="my-journey-inner">
                         <div class="my-journey-title">
                             <div class="my-journey-text-title"><span>My<br>Journey</span></div>
@@ -289,23 +280,26 @@
                                         <div class="my-journey-card j-card1">
                                             <div class="my-journey-card-content">
                                                 <div class="journey-year">
-                                                    <h1>2018</h1>
+                                                    <h1>{{journey1.startyear}}</h1>
+                                                    {% if journey1.endyear != "" %}
+                                                        <h2>{{journey1.endyear}}</h2>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="journey-text">
-                                                    <span>Completed Secondary school at Gajera International
-                                                        School,Surat</span>
+                                                    <span>{{journey1.desc}}</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="my-journey-card j-card2">
                                             <div class="my-journey-card-content">
                                                 <div class="journey-year">
-                                                    <h1>2018-</h1>
-                                                    <h2>2021</h2>
+                                                    <h1>{{journey2.startyear}}</h1>
+                                                    {% if journey2.endyear != "" %}
+                                                        <h2>{{journey2.endyear}}</h2>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="journey-text">
-                                                    <span>Joined Diploma in Information Technology,at SSGCET ,
-                                                        Surat</span>
+                                                    <span>{{journey2.desc}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -315,22 +309,26 @@
                                         <div class="my-journey-card j-card3">
                                             <div class="my-journey-card-content">
                                                 <div class="journey-year">
-                                                    <h1>2021</h1>
+                                                    <h1>{{journey3.startyear}}</h1>
+                                                    {% if journey3.endyear != "" %}
+                                                        <h2>{{journey3.endyear}}</h2>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="journey-text">
-                                                    <span>Started Bachelor in Information Technology,at LDCE ,
-                                                        Ahmedabad</span>
+                                                    <span>{{journey3.desc}}</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="my-journey-card j-card4">
                                             <div class="my-journey-card-content">
                                                 <div class="journey-year">
-                                                    <h1 class="journey22">2022-</h1>
-                                                    <h3>Present</h3>
+                                                    <h1 class="journey22">{{journey4.startyear}}</h1>
+                                                    {% if journey4.endyear != "" %}
+                                                        <h3>{{journey4.endyear}}</h3>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="journey-text">
-                                                    <span>Looking for gaining more skills/knowledge and tech job</span>
+                                                    <span>{{journey4.desc}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -403,7 +401,7 @@
 
 
                 <!--My-Projects-->
-                <div class="my-project-outer">
+                <div class="my-project-outer" data-aos="fade-up" data-aos-duration="1000" id="project">
                     <div class="my-project-inner">
                         <div class="my-project-title">
                             <div class="my-project-title-text">
@@ -430,15 +428,15 @@
                             </div>
 
                             <div id="prjslider" class="owl-carousel my-project-content-inner">
+                                {% for project in projects  %}
                                 <div class="project-slider-item item">
-
                                     <div class="project-text-outer">
                                         <div class="project-text-number">
                                             <div class="prj-num-up">
-                                                <h1>01</h1>
+                                                <h1>{{project.id}}</h1>
                                             </div>
                                             <div class="prj-num-down">
-                                                <h3>08</h3>
+                                                <h3>0{{projects|length}}</h3>
                                             </div>
                                         </div>
 
@@ -446,80 +444,120 @@
                                         <div class="project-text-desc">
                                             <div class="project-desc-inner">
                                                 <div class="proj-title">
-                                                    <span>CONNECT</span>
+                                                    <span>{{project.name}}</span>
                                                 </div>
                                                 <div class="prj-tech">
-                                                    <span>#Java</span>
-                                                    <span>#Android</span>
-                                                    <span>#Flask</span>
+                                                    <span>{{project.tech}}
                                                 </div>
                                                 <div class="prj-text">
                                                     <p>
-                                                        Connect connects audiences to all your of your content with just
-                                                        one
-                                                        link.It is an opensource alternative to linkrtree implemented in
-                                                        javascript and flask.
+                                                       {{project.desc}}
                                                     </p>
+                                                    <div class="prj-links">
+                                                        {% if project.live %}
+                                                        <div class="prj-live" data-cursor="pointer">
+                                                            <a href={{project.live}} target="_blank"><span>SEE LIVE</span></a>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        </div>
+                                                        {% endif %}
+                                                        {% if project.github %}
+                                                        <div class="prj-live" data-cursor="pointer">
+                                                            <a href={{project.github}} target="_blank"><span>GITHUB</span></a>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        </div>
+                                                        {% endif %}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="project-image-outer">
                                         <div class="project-image-inner">
                                             <div class="prj-image">
-                                                <img src=" {% static 'image/spotifinder-cover.png' %}" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="project-slider-item item">
-                                    <div class="project-text-outer">
-                                        <div class="project-text-number">
-                                            <div class="prj-num-up">
-                                                <h1>02</h1>
-                                            </div>
-                                            <div class="prj-num-down">
-                                                <h3>08</h3>
-                                            </div>
-                                        </div>
-
-                                        <div class="project-text-desc">
-                                            <div class="project-desc-inner">
-                                                <div class="proj-title">
-                                                    <span>CONNECT</span>
-                                                </div>
-                                                <div class="prj-tech">
-                                                    <span>#Java #Android #Flask </span>
-                                                </div>
-                                                <div class="prj-text">
-                                                    <p>
-                                                        Connect connects audiences to all your of your content with just
-                                                        one
-                                                        link.It is an opensource alternative to linkrtree implemented in
-                                                        javascript and flask.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="project-image-outer">
-                                        <div class="project-image-inner">
-                                            <div class="prj-image">
-                                                <img src=" {% static 'image/itemcover.png' %}" />
+                                                <img src="/static/{{project.projectimg}}" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
+
                 {% endblock %}
+            </div>
+            <!--Contact-->
+            <div class="contact-container"  data-aos="fade-up" data-aos-duration="1000" id="contact">
+                <div class="contact-container-inner">
+                    <div class="contact-hand" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                        <img src="{% static 'image/footer-rock.png' %}">
+                    </div>
+
+                    <div class="contact-me-outer">
+                        <div class="contact-me-inner">
+                            <div class="contact-me-head">
+                                <h1>Say Hi!</h1>
+                            </div>
+                            <div class="contact-me-text">
+                                <p>If you want to hire me, please send me an e-mail at <a href="#" class="contact-email">kevalvavaliya@gmail.com</a>, Or
+                                    contact me via social media</p>
+                            </div>
+
+                            <div class="contact-social">
+                                <div class="contact-social-icons">
+                                    <div class="contact-social-item" data-cursor="pointer">
+                                        <a href="{{social_links.0.socialURL}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60"
+                                                height="60" viewBox="0 0 30 30" style=" fill:#000000;">
+                                                <path
+                                                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="contact-social-item" data-cursor="pointer">
+                                        <a href="{{social_links.1.socialURL}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                                height="50" viewBox="0 0 50 50" style=" fill:#000000;">
+                                                <path
+                                                    d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="contact-social-item" data-cursor="pointer">
+                                        <a href="{{social_links.2.socialURL}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                                height="50" viewBox="0 0 50 50" style=" fill:#000000;">
+                                                <path
+                                                    d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524 c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489 c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847 c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07 c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786 c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539 c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064 c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <div class="contact-social-item" data-cursor="pointer">
+                                        <a href="{{social_links.3.socialURL}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60"
+                                                height="60" viewBox="0 0 30 30" style=" fill:#000000;">
+                                                <path
+                                                    d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-copyright kevalvavaliya" >
+                            <span>© <script>document.write(new Date().getFullYear());</script> {{yourname}}. Crafted by yours truly with ❤️</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
