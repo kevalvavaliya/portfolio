@@ -20,8 +20,21 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
+const observer1 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+      const square = entry.target.querySelector('.bottom-text-slider');
+
+      if (entry.isIntersecting) {
+          square.classList.add('bottom-text-slider-animation');
+          return; // if we added the class, exit the function
+      }
+
+      // We're not intersecting, so remove the class!
+      square.classList.remove('bottom-text-slider-animation');
+  });
+});
 observer.observe(document.querySelector('.right-content-home'));
-observer.observe(document.querySelector('.about-image'));
+observer1.observe(document.querySelector('.about-image'));
 
 
 function startLoader() {

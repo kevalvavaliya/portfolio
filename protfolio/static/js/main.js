@@ -1,12 +1,13 @@
 
-// $(window).on('load', function () {
-// 	setTimeout(removeLoader,3200);
-// 	}); 
-//   function removeLoader(){
-//   $('.container').show()
-// 	$('.loader').slideUp(1000);
-// }
+
+
 $(document).ready(function () {
+  $(document).bind('keydown', function(e) {
+    if(e.ctrlKey && (e.which == 83)) {
+      e.preventDefault();
+      return false;
+    }
+  });
   $('#menu').click(function () {
     $('#menu').toggleClass('rotate');
     $('.navbar-main').toggleClass('nav-transform');

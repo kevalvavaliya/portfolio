@@ -551,7 +551,9 @@
     .scroll-down-main {
         display: none;
     }
-
+    .about-main{
+        margin-top: 100px;
+    }
     .about-text {
         padding: 0px 8px;
     }
