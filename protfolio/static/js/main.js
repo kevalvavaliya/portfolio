@@ -1,9 +1,6 @@
-
-
-
 $(document).ready(function () {
-  $(document).bind('keydown', function(e) {
-    if(e.ctrlKey && (e.which == 83)) {
+  $(document).bind('keydown', function (e) {
+    if (e.ctrlKey && (e.which == 83)) {
       e.preventDefault();
       return false;
     }
@@ -33,7 +30,7 @@ $(document).ready(function () {
     items: 1,
     loop: true,
     animateIn: 'animate__jackInTheBox',
-    smartSpeed:450,
+    smartSpeed: 450,
     navText: ['<img src="https://img.icons8.com/sf-regular/48/000000/left.png"/>', '<img src="https://img.icons8.com/sf-regular/48/000000/right.png"/>']
   });
 
@@ -70,6 +67,6 @@ $(document).on('click', 'a[href^="#"]', function (event) {
   event.preventDefault();
   console.log("As")
   $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
+    scrollTop: $($.attr(this, 'href')).offset().top
   }, 1000);
 });
