@@ -24,33 +24,33 @@ observer.observe(document.querySelector('.right-content-home'));
 observer.observe(document.querySelector('.about-image'));
 
 
-// function startLoader() {
-
-//     window.addEventListener("DOMContentLoaded", function(event) {
-//       setTimeout(function() {
-//         $('.loader').slideUp(700);
-//         $('.main-text-container').show();
-
-//         headerAnimation.playSegments([0, 300], true);
-
-//       }, 3500);
-      
-//     });
-//   }
-  
 function startLoader() {
 
-  window.addEventListener("DOMContentLoaded", function(event) {
-    setTimeout(function() {
-      $('.loader').slideUp(100);
-      $('.main-text-container').show();
+    window.addEventListener("DOMContentLoaded", function(event) {
+      setTimeout(function() {
+        $('.loader').slideUp(700);
+        $('.main-text-container').show();
 
-      headerAnimation.playSegments([0, 300], true);
+        headerAnimation.playSegments([0, 300], true);
 
-    }, 100);
+      }, 3500);
+      
+    });
+  }
+  
+// function startLoader() {
+
+//   window.addEventListener("DOMContentLoaded", function(event) {
+//     setTimeout(function() {
+//       $('.loader').slideUp(100);
+//       $('.main-text-container').show();
+
+//       headerAnimation.playSegments([0, 300], true);
+
+//     }, 100);
     
-  });
-}
+//   });
+// }
 
   startLoader();
   
