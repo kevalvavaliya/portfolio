@@ -63,10 +63,14 @@
 }
 
 body {
-    /* cursor: none;  */
+    cursor: none; 
     background-color: #f2f2f2;
     scroll-behavior: smooth;
 }
+::selection {
+    background: var(--primary);
+    color: #fff;
+  }
 
 a {
     text-decoration: none;
@@ -989,12 +993,14 @@ p:nth-child(2) {
 .my-project-title-text>h1 {
     font-family: 'Gotham';
     font-size: 40px;
+    font-weight: 600;
     margin-bottom: 6px;
     color: var(--black);
 }
 
 .my-project-title-text>span {
     font-family: 'Gotham';
+    font-weight: 500;
     font-size: 20px;
     color: var(--primary);
 }
@@ -1079,6 +1085,7 @@ p:nth-child(2) {
     text-transform: uppercase;
     font-family: 'Gotham';
     font-size: 1.6em;
+    font-weight: 500;
     color: var(--black);
 }
 
