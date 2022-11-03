@@ -453,20 +453,33 @@
                                                     <p>
                                                        {{project.desc}}
                                                     </p>
-                                                    <div class="prj-links">
-                                                        {% if project.live %}
-                                                        <div class="prj-live" data-cursor="pointer">
-                                                            <a href={{project.live}} target="_blank"><span>SEE LIVE</span></a>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
-                                                        </div>
-                                                        {% endif %}
-                                                        {% if project.github %}
-                                                        <div class="prj-live" data-cursor="pointer">
-                                                            <a href={{project.github}} target="_blank"><span>GITHUB</span></a>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
-                                                        </div>
-                                                        {% endif %}
+                                                    
+                                                </div>
+                                                <div class="prj-links">
+                                                    {% if project.live %}
+                                                    <div class="prj-live" data-cursor="pointer">
+                                                        <a href={{project.live}} target="_blank"><span>SEE LIVE</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
                                                     </div>
+                                                    {% endif %}
+                                                    {% if project.devpost %}
+                                                    <div class="prj-live" data-cursor="pointer">
+                                                        <a href={{project.devpost}} target="_blank"><span>DEVPOST</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if project.devfolio %}
+                                                    <div class="prj-live" data-cursor="pointer">
+                                                        <a href={{project.devfolio}} target="_blank"><span>DEVFOLIO</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if project.github %}
+                                                    <div class="prj-live" data-cursor="pointer">
+                                                        <a href={{project.github}} target="_blank"><span>GITHUB</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                    </div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>

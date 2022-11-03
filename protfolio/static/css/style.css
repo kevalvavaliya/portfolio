@@ -1090,6 +1090,9 @@ p:nth-child(2) {
 }
 
 .prj-text {
+    max-height: 250;
+    overflow-y: auto;
+
     margin-top: 50px;
     font-family: 'Gotham';
     font-size: 20px;
@@ -1100,6 +1103,8 @@ p:nth-child(2) {
 }
 
 .prj-links {
+    font-family: 'Gotham';
+    font-size: 20px;
     margin-top: 20px;
     width: 100%;
     gap: 14px;
@@ -1123,6 +1128,10 @@ p:nth-child(2) {
 .prj-live>svg {
     height: 20px;
     width: 20px;
+}
+.prj-live>a>span{
+    white-space: nowrap;
+
 }
 
 .project-image-outer {

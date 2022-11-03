@@ -72,9 +72,11 @@
     .project-text-number {
         font-size: 28px;
     }
+
     .prj-num-down {
         font-size: 26px;
     }
+
     .prj-num-up::after {
         font-size: 50px;
         right: -34px;
@@ -104,12 +106,15 @@
     .contact-container {
         height: 460px;
     }
+
     .contact-me-head {
         font-size: 31px;
     }
-    .contact-me-text{
+
+    .contact-me-text {
         font-size: 20px;
     }
+
     .contact-social-item {
         height: 40px;
         width: 40px;
@@ -231,20 +236,24 @@
         right: -2%;
         top: 63%;
     }
-    
+
     .contact-container {
         height: 450px;
     }
+
     .contact-me-head {
         font-size: 30px;
     }
-    .contact-me-text{
+
+    .contact-me-text {
         font-size: 19px;
     }
+
     .contact-social-item {
         height: 38px;
         width: 38px;
     }
+
     .footer-copyright {
         font-size: 14px;
     }
@@ -363,7 +372,8 @@
     .my-project-title-text>h1 {
         font-size: 38px;
     }
-    .footer-copyright{
+
+    .footer-copyright {
         font-size: 12px;
     }
 }
@@ -474,6 +484,7 @@
         top: initial;
         bottom: -1%;
     }
+
     .my-project-title-text>h1 {
         font-size: 34px;
     }
@@ -481,25 +492,27 @@
     .my-project-title-text>span {
         font-size: 14px;
     }
-    .my-project-content
-    {
+
+    .my-project-content {
         margin-top: 10px;
     }
-    .line6{
+
+    .line6 {
         max-height: 3.6rem;
     }
+
     .contact-container {
         height: 420px;
     }
-  
-    .contact-me-text{
+
+    .contact-me-text {
         font-size: 18px;
     }
-    
+
     .contact-me-outer {
         width: 50%;
     }
-    
+
 }
 
 @media only screen and (max-width: 540px) {
@@ -551,9 +564,11 @@
     .scroll-down-main {
         display: none;
     }
-    .about-main{
+
+    .about-main {
         margin-top: 100px;
     }
+
     .about-text {
         padding: 0px 8px;
     }
@@ -696,9 +711,11 @@
     #prjslider .owl-nav button.owl-next {
         right: -5%;
     }
-    #prjslider .owl-nav button.owl-prev{
+
+    #prjslider .owl-nav button.owl-prev {
         left: -5%;
     }
+
     .my-project-content::after {
         height: 180px;
         width: 250px;
@@ -706,51 +723,73 @@
         top: initial;
         bottom: -10%;
     }
+
     .prj-tech {
         font-size: 1.3em;
     }
+
     .proj-title {
         font-size: 1.5em;
     }
+
     .prj-text {
+        min-height: 100;
+        max-height: 150;
+        overflow-y: auto;
         font-size: 16px;
-        margin-top: 35px;
+        margin-top: 25px;
     }
+
+    .prj-links {
+        font-size: 16px;
+        gap: 10px;
+    }
+
     .contact-container {
         height: 340px;
     }
-    .contact-hand{
+
+    .contact-hand {
         width: 45%;
     }
+
     .contact-social-item {
         height: 25px;
         width: 25px;
     }
+
     .contact-social-item {
         padding: 8px;
         margin: 0;
     }
+
     .contact-social-icons {
         gap: 10px;
     }
+
     .contact-me-head {
         font-size: 26px;
     }
+
     .contact-me-text {
         font-size: 14px;
     }
+
     .contact-me-outer {
         width: 55%;
     }
+
     .footer-copyright {
         font-size: 10px;
     }
+
     .contact-me-text {
         margin-top: 14px;
-    }    
-    .prj-live>svg{
-        height: 16px;
-        width: 16px;
+    }
+
+    .prj-live>svg {
+        height: 14px;
+        width: 14px;
     }
 }
 
@@ -815,29 +854,49 @@
     .my-project-title-text>h1 {
         font-size: 26px;
     }
+
     .prj-text {
         font-size: 14px;
     }
+
     .proj-title {
         font-size: 1.4em;
     }
+
     .prj-tech {
         font-size: 1.2em;
-    }   
+    }
+
+    .prj-live>svg {
+        height: 12px;
+        width: 12px;
+    }
+    .prj-links {
+        font-size: 15px;
+        gap: 8px;
+    }
+    .project-desc-inner {
+        padding: 12px 0px 12px 6px;
+    }
+
     .project-image-inner {
         width: 100%;
         height: 250px;
-    } 
+    }
+
     .my-project-content::after {
         height: 160px;
         width: 188px;
     }
+
     .contact-hand {
         width: 40%;
     }
+
     .contact-me-outer {
         width: 57%;
     }
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -884,36 +943,50 @@
         padding: 6px 14px;
         font-size: 0.9em;
     }
+
     .my-project-title-text>h1 {
         font-size: 24px;
     }
-   
+
     .proj-title {
         font-size: 1.3em;
     }
+
     .prj-tech {
         font-size: 1.1em;
     }
+
+    
+
+    .prj-links {
+        font-size: 14px;
+        
+    }
+
     .project-image-inner {
         width: 100%;
         height: 220px;
     }
+
     .my-project-content::after {
         height: 140px;
         width: 168px;
-    }    
+    }
+
     .contact-container {
         height: 295px;
     }
+
     .contact-me-text {
         font-size: 13px;
     }
+
     .contact-social-item {
         height: 22px;
         width: 22px;
         padding: 6px;
     }
-        
+
 }
 
 /*--------------------------------------------------------------*/

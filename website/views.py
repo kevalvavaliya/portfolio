@@ -76,14 +76,24 @@ def index(request):
     data["projects"] = [
         {
             "id": "01",
+            "name": "Plastidive",
+            "github": "https://github.com/kevalvavaliya/PlastiDive",
+            "devpost":"https://devpost.com/software/plastdive",
+            "projectimg": "image/project/kevalvavaliya-plastidive.png",
+            "tech": "#FLUTTER #FLASK #YOLOV5 #FIREBASE #ML ",
+            "desc": "A game app that helps to eliminate plastic,Click some polluted photos of the beach, the app will upload them to the server. YOLO model will determine the level of plastic and show it up on the map for help from society. Virtuous will help clean the place and upload the photo. YOLO model will check if the beach is clean or not and will reward virtuous with virtual currency.",
+        },
+        {
+            "id": "02",
             "name": "Yog4Life Social App",
             "github": "https://github.com/kevalvavaliya/Yog4Life",
+            "devfolio":"https://devfolio.co/projects/yoglife-b20d",
             "projectimg": "image/project/kevalvavaliya-yog.png",
             "tech": "#FLUTTER #HEDERA #NODE.JS #IPFS(FILECOIN)",
             "desc": "An app for helping people their healthy life. Yog4Life Has a feed feature which is help to get information from the folks, Yog4Life has an anonymous chat room to get connected with the world.",
         },
         {
-            "id": "02",
+            "id": "03",
             "name": "Bauddhik-Geeks Portfolio",
             "github": "https://github.com/Bauddhik-Geeks/Bauddhik-Geeks.github.io",
             "live": "https://bauddhikgeeks.tech/",
@@ -92,7 +102,7 @@ def index(request):
             "desc": "Awesome Community Portfolio website for Bauddhik-Geeks community",
         },
         {
-            "id": "03",
+            "id": "04",
             "name": "Connect",
             "github": "https://github.com/abhigoyani/connect1",
             "projectimg": "image/project/kevalvavaliya-connect.png",
@@ -100,7 +110,7 @@ def index(request):
             "desc": "Connect connects audiences to all of your content with just one click.It is an open source alternative to linkrtree implemented in javscript and flask",
         },
         {
-            "id": "04",
+            "id": "05",
             "name": "Goverdhan Institute site",
             "github": "https://github.com/kevalvavaliya/Goverdhan-infotech",
             "projectimg": "image/project/kevalvavaliya-goverdhan.png",
@@ -108,7 +118,7 @@ def index(request):
             "desc": "Education site for goverdhan institute that manages the courses and events online which makes student easy to reach them.",
         },
         {
-            "id": "05",
+            "id": "06",
             "name": "We-Donate",
             "github": "https://github.com/kevalvavaliya/We-Donate",
             "projectimg": "image/project/kevalvavaliya-wedonate.png",
@@ -116,7 +126,7 @@ def index(request):
             "desc": "We-Donate aims in bringing digitization in donation.we donate delivers your donation to the right hands and provides home pickup services.",
         },
         {
-            "id": "06",
+            "id": "07",
             "name": "Localens",
             "github": "https://github.com/kevalvavaliya/Localens",
             "projectimg": "image/project/kevalvavaliya-localens.png",
@@ -124,7 +134,7 @@ def index(request):
             "desc": "Localens is an android app for finding local beauty spots in your localities and get them capture in the app and take it to the world",
         },
         {
-            "id": "07",
+            "id": "08",
             "name": "Vishvas Fabrics Ecommerce site",
             "github": "https://github.com/kevalvavaliya/E-commerce-site",
             "projectimg": "image/project/kevalvavaliya-vishvas.png",
@@ -132,7 +142,7 @@ def index(request):
             "desc": "A basic ecommerce site for vishvas fabrics",
         },
         {
-            "id": "08",
+            "id": "09",
             "name": "Sachivato news and blog site",
             "projectimg": "image/project/itemcover.png",
             "tech": "#WORDPRESS #DIGITALOCEAN",
