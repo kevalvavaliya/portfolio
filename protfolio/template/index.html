@@ -488,6 +488,20 @@
                                         <div class="project-image-inner">
                                             <div class="prj-image">
                                                 <img src="/static/{{project.projectimg}}" />
+                                                {% if project.winner %}
+                                                    {% if project.devpost %}
+                                                    <a href={{project.devpost}}>
+                                                    {% endif %}
+
+                                                    {% if project.devfolio %}
+                                                    <a href={{project.devfolio}}>
+                                                    {% endif %}
+                                                        
+                                                        <div class="winner-ribbon" data-cursor="pointer">
+                                                            <span>Winner🎖️</span><br><span>{{project.winner}}</span>
+                                                        </div>
+                                                    </a>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>

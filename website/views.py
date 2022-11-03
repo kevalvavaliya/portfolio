@@ -80,7 +80,8 @@ def index(request):
             "github": "https://github.com/kevalvavaliya/PlastiDive",
             "devpost":"https://devpost.com/software/plastdive",
             "projectimg": "image/project/kevalvavaliya-plastidive.png",
-            "tech": "#FLUTTER #FLASK #YOLOV5 #FIREBASE #ML ",
+            "tech": "#FLUTTER #FLASK #YOLOV5 #FIREBASE #ML",
+            "winner":"DeepDive Hacks",
             "desc": "A game app that helps to eliminate plastic,Click some polluted photos of the beach, the app will upload them to the server. YOLO model will determine the level of plastic and show it up on the map for help from society. Virtuous will help clean the place and upload the photo. YOLO model will check if the beach is clean or not and will reward virtuous with virtual currency.",
         },
         {
@@ -90,6 +91,7 @@ def index(request):
             "devfolio":"https://devfolio.co/projects/yoglife-b20d",
             "projectimg": "image/project/kevalvavaliya-yog.png",
             "tech": "#FLUTTER #HEDERA #NODE.JS #IPFS(FILECOIN)",
+            "winner":"HackOdisha",
             "desc": "An app for helping people their healthy life. Yog4Life Has a feed feature which is help to get information from the folks, Yog4Life has an anonymous chat room to get connected with the world.",
         },
         {

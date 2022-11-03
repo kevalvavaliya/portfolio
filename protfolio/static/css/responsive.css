@@ -119,6 +119,10 @@
         height: 40px;
         width: 40px;
     }
+    .winner-ribbon{
+        top: 15px;
+        left: -60px;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -467,6 +471,9 @@
         width: 100%;
     }
 
+    .prj-text {
+        min-height: 130;
+    }
     #prjslider .owl-nav button.owl-next {
         top: 64%;
         right: 5%;
@@ -731,10 +738,10 @@
     .proj-title {
         font-size: 1.5em;
     }
-
+    
     .prj-text {
-        min-height: 100;
-        max-height: 150;
+        min-height: 60;
+        max-height: 100;
         overflow-y: auto;
         font-size: 16px;
         margin-top: 25px;
@@ -790,6 +797,13 @@
     .prj-live>svg {
         height: 14px;
         width: 14px;
+    }
+    .winner-ribbon {
+        top: 14px;
+        left: -74px;
+        font-size: 8px;
+        line-height: 10px;
+
     }
 }
 
@@ -985,6 +999,12 @@
         height: 22px;
         width: 22px;
         padding: 6px;
+    }
+    .winner-ribbon {
+        top: 12px;
+        left: -76px;
+        font-size: 7px;
+        line-height: 8px;
     }
 
 }
