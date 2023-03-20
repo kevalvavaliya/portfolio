@@ -55,6 +55,7 @@
 }
 
 :root {
+    --darkmode: rgb(16 16 20);
     --primary: #ff6700;
     --black: black;
     --fontgray: #d9d3d3;
@@ -62,10 +63,18 @@
     --colorTextBody: rgb(var(--rgbText) / 0.8);
 }
 
+.darkmode {
+    background-color: var(--darkmode) !important;
+    color: #f2f2f2 !important;
+    --fontgray: red;
+
+}
+
 body {
     cursor: none;
     background-color: #f2f2f2;
     scroll-behavior: smooth;
+    transition: 0.6s;
 }
 
 ::selection {
@@ -116,7 +125,7 @@ a {
 .loader {
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: inherit;
     height: 100vh;
     z-index: 99999;
     display: flex;
@@ -125,6 +134,7 @@ a {
     flex-direction: column;
     border-bottom: 3px solid var(--primary);
 }
+
 
 .loader-inner-text {
     width: 300px;
@@ -422,6 +432,10 @@ p:nth-child(2) {
     fill: var(--primary) !important;
 }
 
+#darkbutton {
+    width: 34px;
+    margin-top: 16px;
+}
 
 
 /* ----------------------------content--------------------------------------- */
@@ -503,12 +517,24 @@ p:nth-child(2) {
     /* color: var(--primary); */
 }
 
+.dev-textd-darkmode {
+    background: linear-gradient(-45deg, #fff5b0, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .dev-text {
     font-family: 'Gotham';
     font-size: 4vw;
     line-height: 1;
     font-weight: 500;
     transform: translateX(-9px);
+}
+
+.dev-text-darkmode {
+    background: linear-gradient(-45deg, var(--primary), #fd0, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .bottom-animated-text {
@@ -687,6 +713,7 @@ p:nth-child(2) {
 .about-image>img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .journey-line-outer {
@@ -755,8 +782,29 @@ p:nth-child(2) {
     position: absolute;
 }
 
+.my-journey-outer-dark::before {
+    content: '';
+    top: 0px;
+    width: 100vw;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2321cdd5' fill-opacity='1' d='M0 256L80 266.7C160 277 320 299 480 272C640 245 800 171 960 154.7C1120 139 1280 181 1360 202.7L1440 224L1440 320L1360 320C1280 320 1120 320 960 320C800 320 640 320 480 320C320 320 160 320 80 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
+
+
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23143c30' fill-opacity='1' d='M0 160L48 144C96 128 192 96 288 101.3C384 107 480 149 576 154.7C672 160 768 128 864 138.7C960 149 1056 203 1152 197.3C1248 192 1344 128 1392 96L1440 64L1440 320L1392 320C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320L0 320Z'%3E%3C/path%3E%3C/svg%3E");
+
+
+    height: 100%;
+    z-index: -1;
+    right: 0px;
+    background-position: 0px -108px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
 .my-journey-outer::after {
     content: '';
+    /* 2383e3e2 */
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 160L60 149.3C120 139 240 117 360 133.3C480 149 600 203 720 213.3C840 224 960 192 1080 181.3C1200 171 1320 181 1380 186.7L1440 192L1440 320L1380 320C1320 320 1200 320 1080 320C960 320 840 320 720 320C600 320 480 320 360 320C240 320 120 320 60 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 288L30 250.7C60 213 120 139 180 138.7C240 139 300 213 360 250.7C420 288 480 288 540 261.3C600 235 660 181 720 160C780 139 840 149 900 170.7C960 192 1020 224 1080 229.3C1140 235 1200 213 1260 192C1320 171 1380 149 1410 138.7L1440 128L1440 320L1410 320C1380 320 1320 320 1260 320C1200 320 1140 320 1080 320C1020 320 960 320 900 320C840 320 780 320 720 320C660 320 600 320 540 320C480 320 420 320 360 320C300 320 240 320 180 320C120 320 60 320 30 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 288L48 272C96 256 192 224 288 202.7C384 181 480 171 576 186.7C672 203 768 245 864 266.7C960 288 1056 288 1152 256C1248 224 1344 160 1392 128L1440 96L1440 320L1392 320C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
@@ -770,6 +818,24 @@ p:nth-child(2) {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+}
+
+.my-journey-outer-dark::after {
+    content: '';
+    /* 2383e3e2 */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 160L60 149.3C120 139 240 117 360 133.3C480 149 600 203 720 213.3C840 224 960 192 1080 181.3C1200 171 1320 181 1380 186.7L1440 192L1440 320L1380 320C1320 320 1200 320 1080 320C960 320 840 320 720 320C600 320 480 320 360 320C240 320 120 320 60 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 288L30 250.7C60 213 120 139 180 138.7C240 139 300 213 360 250.7C420 288 480 288 540 261.3C600 235 660 181 720 160C780 139 840 149 900 170.7C960 192 1020 224 1080 229.3C1140 235 1200 213 1260 192C1320 171 1380 149 1410 138.7L1440 128L1440 320L1410 320C1380 320 1320 320 1260 320C1200 320 1140 320 1080 320C1020 320 960 320 900 320C840 320 780 320 720 320C660 320 600 320 540 320C480 320 420 320 360 320C300 320 240 320 180 320C120 320 60 320 30 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='1' d='M0 288L48 272C96 256 192 224 288 202.7C384 181 480 171 576 186.7C672 203 768 245 864 266.7C960 288 1056 288 1152 256C1248 224 1344 160 1392 128L1440 96L1440 320L1392 320C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320L0 320Z'%3E%3C/path%3E%3C/svg%3E"); */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23143c30' fill-opacity='1' d='M0 96L80 117.3C160 139 320 181 480 170.7C640 160 800 96 960 90.7C1120 85 1280 139 1360 165.3L1440 192L1440 0L1360 0C1280 0 1120 0 960 0C800 0 640 0 480 0C320 0 160 0 80 0L0 0Z'%3E%3C/path%3E%3C/svg%3E") !important;
+    /* height: 100%;
+    width: 100vw;
+    z-index: -1;
+    right: 0px;
+    background-position: 0px 0px;
+    top: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; */
 }
 
 .my-journey-inner {
@@ -804,6 +870,11 @@ p:nth-child(2) {
     height: 260px;
     background-color: #f2f2f2;
     padding: 10px;
+    transition: 0.6s;
+}
+
+.my-journey-card-dark {
+    background-color: #201b16;
 }
 
 .journey-card-left,
@@ -818,6 +889,11 @@ p:nth-child(2) {
     height: 100%;
     width: auto;
     padding: 0px 8px;
+    transition: 0.6s;
+}
+
+.my-journey-card-content-dark {
+    background-color: #9eb9a4 !important;
 }
 
 .journey-year {
@@ -841,7 +917,7 @@ p:nth-child(2) {
     font-size: 18px;
     font-family: 'Gotham';
     font-weight: 300;
-    color: var(--colorTextBody);
+    color: rgb(var(--rgbText) / 0.8);
     line-height: 1.4;
 }
 
@@ -968,6 +1044,12 @@ p:nth-child(2) {
     font-family: sans-serif;
     font-weight: 450;
     justify-content: center;
+}
+
+.skill-item-dark {
+    background-color: #3a3939 !important;
+    transition: 0.2s;
+
 }
 
 /*-------------------- MY PROJECTS -------------------------*/
@@ -1243,12 +1325,13 @@ p:nth-child(2) {
     color: #000;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
     transition: 0.2s;
-    
+
 
 }
-.winner-ribbon:hover{
+
+.winner-ribbon:hover {
     color: #eee;
 }
 

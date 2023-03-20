@@ -153,6 +153,6 @@ def index(request):
     ]
     data[
         "resumelink"
-    ]: "https://drive.google.com/file/d/1Nc_Wl2OmqLR_BIquDEC3s8E-VCwbO-z8/view?usp=sharing"
+    ]= "https://drive.google.com/file/d/1Nc_Wl2OmqLR_BIquDEC3s8E-VCwbO-z8/view?usp=sharing"
 
     return render(request, "index.html", data)

@@ -119,7 +119,8 @@
         height: 40px;
         width: 40px;
     }
-    .winner-ribbon{
+
+    .winner-ribbon {
         top: 15px;
         left: -60px;
     }
@@ -474,6 +475,7 @@
     .prj-text {
         min-height: 130;
     }
+
     #prjslider .owl-nav button.owl-next {
         top: 64%;
         right: 5%;
@@ -738,7 +740,7 @@
     .proj-title {
         font-size: 1.5em;
     }
-    
+
     .prj-text {
         min-height: 60;
         max-height: 100;
@@ -798,6 +800,7 @@
         height: 14px;
         width: 14px;
     }
+
     .winner-ribbon {
         top: 14px;
         left: -74px;
@@ -885,10 +888,12 @@
         height: 12px;
         width: 12px;
     }
+
     .prj-links {
         font-size: 15px;
         gap: 8px;
     }
+
     .project-desc-inner {
         padding: 12px 0px 12px 6px;
     }
@@ -970,11 +975,11 @@
         font-size: 1.1em;
     }
 
-    
+
 
     .prj-links {
         font-size: 14px;
-        
+
     }
 
     .project-image-inner {
@@ -1000,6 +1005,7 @@
         width: 22px;
         padding: 6px;
     }
+
     .winner-ribbon {
         top: 12px;
         left: -76px;
@@ -1064,11 +1070,14 @@ screen and (max-height:650px) {
         backdrop-filter: blur(10px);
         left: 0;
     }
-
+    .navbar-main-dark {
+        background: #3a3737e6 !important;
+    }
     .nav-social-icons {
         flex-direction: row;
         width: 100%;
         height: 70px;
+        margin-top: 12px;
         border-top: 0.5px solid #d9d3d3;
         justify-content: space-evenly;
     }
@@ -1078,5 +1087,35 @@ screen and (max-height:650px) {
         top: 0;
         left: 0;
         position: fixed;
+    }
+
+    #darkbutton {
+        width: 25px !important;
+        margin-top: 0 !important;
+    }
+    .navbar-main{
+        top:initial !important;
+    }
+    
+
+}
+
+@media only screen and (max-height: 698px) {
+
+    .nav-icon-item {
+        margin: 2px 0px;
+    }
+
+    .nav-social-icons {
+
+        margin-top: 12px;
+    }
+    #darkbutton {
+        width: 32px;
+        margin-top: 12px;
+    }
+    
+    .navbar-main{
+        top:7.5rem;
     }
 }

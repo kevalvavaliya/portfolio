@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -21,7 +21,9 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
         integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.min.js' %}"></script>
 
     {% comment %}
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script> --> {% endcomment %}
@@ -146,7 +148,12 @@
                             </div>
                         </a>
                     </div>
+                    <div class="nav-icon-item x" id="darkbutton" onclick="changedarkbutton()">
+                        <!-- <lottie-player src="{% static '/image/darkmode.json' %}" background="transparent" speed="1"
+                            autoplay></lottie-player> -->
+                    </div>
                 </div>
+               
             </div>
         </div>
         <!--navbar end-->
@@ -189,7 +196,8 @@
                     <div class="left-graphic-content">
                         <div class="left-graphic-inner">
                             <div class="left-image">
-                                <!-- <lottie-player src="{% static 'image/homeimage.json'%}" background="transparent"
+
+                                <!-- <lottie-player src="{% static '/image/homeimage.json' %}" background="transparent"
                                     speed="1" autoplay>
                                 </lottie-player> -->
                             </div>
@@ -233,8 +241,9 @@
                                 </svg>
                             </div>
                             <div class="resume-outer">
-                                <div class="resume-inner" onclick=" window.open('https://drive.google.com/file/d/15WKweJtrhTtkXXd1D-uRd4fLQELjCA8G/view?usp=sharing','_blank')" data-cursor="pointer" 
-                                    <span>RESUME</span>
+                                <div class="resume-inner"
+                                    onclick=" window.open('https://drive.google.com/file/d/15WKweJtrhTtkXXd1D-uRd4fLQELjCA8G/view?usp=sharing','_blank')"
+                                    data-cursor="pointer" <span>RESUME</span>
                                 </div>
                             </div>
                             <div class="journey-line-outer line2">
@@ -282,7 +291,7 @@
                                                 <div class="journey-year">
                                                     <h1>{{journey1.startyear}}</h1>
                                                     {% if journey1.endyear != "" %}
-                                                        <h2>{{journey1.endyear}}</h2>
+                                                    <h2>{{journey1.endyear}}</h2>
                                                     {% endif %}
                                                 </div>
                                                 <div class="journey-text">
@@ -295,7 +304,7 @@
                                                 <div class="journey-year">
                                                     <h1>{{journey2.startyear}}</h1>
                                                     {% if journey2.endyear != "" %}
-                                                        <h2>{{journey2.endyear}}</h2>
+                                                    <h2>{{journey2.endyear}}</h2>
                                                     {% endif %}
                                                 </div>
                                                 <div class="journey-text">
@@ -311,7 +320,7 @@
                                                 <div class="journey-year">
                                                     <h1>{{journey3.startyear}}</h1>
                                                     {% if journey3.endyear != "" %}
-                                                        <h2>{{journey3.endyear}}</h2>
+                                                    <h2>{{journey3.endyear}}</h2>
                                                     {% endif %}
                                                 </div>
                                                 <div class="journey-text">
@@ -324,7 +333,7 @@
                                                 <div class="journey-year">
                                                     <h1 class="journey22">{{journey4.startyear}}</h1>
                                                     {% if journey4.endyear != "" %}
-                                                        <h3>{{journey4.endyear}}</h3>
+                                                    <h3>{{journey4.endyear}}</h3>
                                                     {% endif %}
                                                 </div>
                                                 <div class="journey-text">
@@ -428,7 +437,7 @@
                             </div>
 
                             <div id="prjslider" class="owl-carousel my-project-content-inner">
-                                {% for project in projects  %}
+                                {% for project in projects %}
                                 <div class="project-slider-item item">
                                     <div class="project-text-outer">
                                         <div class="project-text-number">
@@ -451,33 +460,73 @@
                                                 </div>
                                                 <div class="prj-text">
                                                     <p>
-                                                       {{project.desc}}
+                                                        {{project.desc}}
                                                     </p>
-                                                    
+
                                                 </div>
                                                 <div class="prj-links">
                                                     {% if project.live %}
                                                     <div class="prj-live" data-cursor="pointer">
-                                                        <a href={{project.live}} target="_blank"><span>SEE LIVE</span></a>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        <a href={{project.live}} target="_blank"><span>SEE
+                                                                LIVE</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0"
+                                                            enable-background="new 0 0 31.2 30.5" version="1.1"
+                                                            viewBox="0 0 31.2 30.5" xml:space="preserve">
+                                                            <g fill="none" stroke="#000" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-miterlimit="10"
+                                                                stroke-width="5">
+                                                                <path d="M7.2 2.7L28.7 2.5 27.9 24"></path>
+                                                                <path d="M28.4 2.8L2.5 28"></path>
+                                                            </g>
+                                                        </svg>
                                                     </div>
                                                     {% endif %}
                                                     {% if project.devpost %}
                                                     <div class="prj-live" data-cursor="pointer">
-                                                        <a href={{project.devpost}} target="_blank"><span>DEVPOST</span></a>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        <a href={{project.devpost}}
+                                                            target="_blank"><span>DEVPOST</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0"
+                                                            enable-background="new 0 0 31.2 30.5" version="1.1"
+                                                            viewBox="0 0 31.2 30.5" xml:space="preserve">
+                                                            <g fill="none" stroke="#000" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-miterlimit="10"
+                                                                stroke-width="5">
+                                                                <path d="M7.2 2.7L28.7 2.5 27.9 24"></path>
+                                                                <path d="M28.4 2.8L2.5 28"></path>
+                                                            </g>
+                                                        </svg>
                                                     </div>
                                                     {% endif %}
                                                     {% if project.devfolio %}
                                                     <div class="prj-live" data-cursor="pointer">
-                                                        <a href={{project.devfolio}} target="_blank"><span>DEVFOLIO</span></a>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        <a href={{project.devfolio}}
+                                                            target="_blank"><span>DEVFOLIO</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0"
+                                                            enable-background="new 0 0 31.2 30.5" version="1.1"
+                                                            viewBox="0 0 31.2 30.5" xml:space="preserve">
+                                                            <g fill="none" stroke="#000" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-miterlimit="10"
+                                                                stroke-width="5">
+                                                                <path d="M7.2 2.7L28.7 2.5 27.9 24"></path>
+                                                                <path d="M28.4 2.8L2.5 28"></path>
+                                                            </g>
+                                                        </svg>
                                                     </div>
                                                     {% endif %}
                                                     {% if project.github %}
                                                     <div class="prj-live" data-cursor="pointer">
-                                                        <a href={{project.github}} target="_blank"><span>GITHUB</span></a>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" enable-background="new 0 0 31.2 30.5" version="1.1" viewBox="0 0 31.2 30.5" xml:space="preserve"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5"><path d="M7.2 2.7L28.7 2.5 27.9 24"></path><path d="M28.4 2.8L2.5 28"></path></g></svg>
+                                                        <a href={{project.github}}
+                                                            target="_blank"><span>GITHUB</span></a>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0"
+                                                            enable-background="new 0 0 31.2 30.5" version="1.1"
+                                                            viewBox="0 0 31.2 30.5" xml:space="preserve">
+                                                            <g fill="none" stroke="#000" stroke-linecap="round"
+                                                                stroke-linejoin="round" stroke-miterlimit="10"
+                                                                stroke-width="5">
+                                                                <path d="M7.2 2.7L28.7 2.5 27.9 24"></path>
+                                                                <path d="M28.4 2.8L2.5 28"></path>
+                                                            </g>
+                                                        </svg>
                                                     </div>
                                                     {% endif %}
                                                 </div>
@@ -489,19 +538,19 @@
                                             <div class="prj-image">
                                                 <img src="/static/{{project.projectimg}}" />
                                                 {% if project.winner %}
-                                                    {% if project.devpost %}
-                                                    <a href={{project.devpost}}>
+                                                {% if project.devpost %}
+                                                <a href={{project.devpost}}>
                                                     {% endif %}
 
                                                     {% if project.devfolio %}
                                                     <a href={{project.devfolio}}>
-                                                    {% endif %}
-                                                        
+                                                        {% endif %}
+
                                                         <div class="winner-ribbon" data-cursor="pointer">
                                                             <span>Winner🎖️</span><br><span>{{project.winner}}</span>
                                                         </div>
                                                     </a>
-                                                {% endif %}
+                                                    {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -515,7 +564,7 @@
                 {% endblock %}
             </div>
             <!--Contact-->
-            <div class="contact-container"  data-aos="fade-up" data-aos-duration="1000" id="contact">
+            <div class="contact-container" data-aos="fade-up" data-aos-duration="1000" id="contact">
                 <div class="contact-container-inner">
                     <div class="contact-hand" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                         <img src="{% static 'image/footer-rock.png' %}">
@@ -527,7 +576,9 @@
                                 <h1>Say Hi!</h1>
                             </div>
                             <div class="contact-me-text">
-                                <p>If you want to hire me, please send me an e-mail at <a href="mailto: kevalvavaliya@gmail.com" class="contact-email">kevalvavaliya@gmail.com</a>, Or
+                                <p>If you want to hire me, please send me an e-mail at <a
+                                        href="mailto: kevalvavaliya@gmail.com"
+                                        class="contact-email">kevalvavaliya@gmail.com</a>, Or
                                     contact me via social media</p>
                             </div>
 
@@ -554,7 +605,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    
+
                                     <div class="contact-social-item" data-cursor="pointer">
                                         <a href="{{social_links.2.socialURL}}">
                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
@@ -579,9 +630,12 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="footer-copyright kevalvavaliya" >
-                            <span>© <script>document.write(new Date().getFullYear());</script> {{yourname}}. Crafted by yours truly with ❤️</span>
+
+                        <div class="footer-copyright kevalvavaliya">
+                            <span>©
+                                <script>document.write(new Date().getFullYear());</script> {{yourname}}. Crafted by
+                                yours truly with ❤️
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -593,7 +647,7 @@
         <script src="{% static 'js/mouseeffect.js' %}"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-          
+
             AOS.init({
                 // Global settings:
                 disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
