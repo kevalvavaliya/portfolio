@@ -19,7 +19,7 @@ def index(request):
     data[
         "aboutpara2"
     ] = "I like to work with new tools and technologies,I’m always down for hearing about new projects, so feel free to drop me a line."
-    data["aboutimage"] = "image/kevalvavaliya.jpg"
+    data["aboutimage"] = "image/kevalvavaliya.jpeg"
 
     # my journey (can have max 4 only)
     data["journey1"] = {
