@@ -675,8 +675,10 @@
 
     .skill-item {
         width: max-content;
-        padding: 8px 18px;
-        font-size: 1.1em;
+        /* padding: 8px 18px;
+        font-size: 1.1em; */
+        padding: 7px 16px;
+        font-size: 1.0em;
     }
 
     .my-project-title-text>h1 {
@@ -854,8 +856,9 @@
 
     .skill-item {
         width: max-content;
-        padding: 8px 16px;
-        font-size: 1em;
+        padding: 6px 12px;
+        font-size: 0.9em;
+        gap:8px;
     }
 
     .skills-container-inner {
@@ -959,8 +962,8 @@
     }
 
     .skill-item {
-        padding: 6px 14px;
-        font-size: 0.9em;
+        /* padding: 6px 14px;
+        font-size: 0.9em; */
     }
 
     .my-project-title-text>h1 {

@@ -15,7 +15,7 @@ def index(request):
     # about
     data[
         "aboutpara1"
-    ] = "I’m Keval, I am Full Stack Web Developer and App developer located in India.I am currently pursuing Bachelor of engineering in Information Technology at LDCE. I consider myself as a maker of things, who solves user-problems using design and/or technology."
+    ] = "I’m Keval, Currently pursuing a Bachelor of Engineering in Information Technology at LDCE, I consider myself as a maker of things, who solves user-problems using technology. My interests and skills extend to Machine Learning, Mobile apps development and System Design, allowing me to explore the realms of intelligent systems and architecting efficient solutions."
     data[
         "aboutpara2"
     ] = "I like to work with new tools and technologies,I’m always down for hearing about new projects, so feel free to drop me a line."
@@ -45,23 +45,28 @@ def index(request):
 
     # my skills
     data["skills"] = [
-        {"name": "Flutter", "icon": "icons/kevalvavaliya-flutter.svg"},
         {"name": "Android", "icon": "icons/kevalvavaliya-android.svg"},
-        {"name": "HTML", "icon": "icons/kevalvavaliya-html.svg"},
-        {"name": "CSS", "icon": "icons/kevalvavaliya-css.svg"},
-        {"name": "JavaScript", "icon": "icons/kevalvavaliya-js.svg"},
+        {"name": "Java", "icon": "icons/kevalvavaliya-java.svg"},
+        {"name": "Flutter", "icon": "icons/kevalvavaliya-flutter.svg"},
+        {"name": "Dart", "icon": "icons/kevalvavaliya-dart.svg"},
         {"name": "Python", "icon": "icons/kevalvavaliya-python.svg"},
         {"name": "Django", "icon": "icons/kevalvavaliya-django.svg"},
-        {"name": "Java", "icon": "icons/kevalvavaliya-java.svg"},
+        {"name": "JavaScript", "icon": "icons/kevalvavaliya-js.svg"},
+        {"name": "HTML", "icon": "icons/kevalvavaliya-html.svg"},
+        {"name": "CSS", "icon": "icons/kevalvavaliya-css.svg"},
         {"name": "PHP", "icon": "icons/kevalvavaliya-php.svg"},
-        {"name": "Firebase", "icon": "icons/kevalvavaliya-firebase.svg"},
-        {"name": "MySQL", "icon": "icons/kevalvavaliya-mysql.svg"},
         {"name": "JQuery", "icon": "icons/kevalvavaliya-jquery.svg"},
+        {"name": "Github", "icon": "icons/kevalvavaliya-github.svg"},
+        {"name": "Firebase", "icon": "icons/kevalvavaliya-firebase.svg"},
+        {"name": "Docker", "icon": "icons/kevalvavaliya-docker.svg"},
+        # {"name": "Wordpress", "icon": "icons/kevalvavaliya-wordpress.svg"},
+        {"name": "MySQL", "icon": "icons/kevalvavaliya-mysql.svg"},
+        {"name": "Flask", "icon": "icons/kevalvavaliya-flask.svg"},
         {"name": "Google Cloud", "icon": "icons/kevalvavaliya-googlecloud.svg"},
-        {"name": "Dart", "icon": "icons/kevalvavaliya-dart.svg"},
-        {"name": "Wordpress", "icon": "icons/kevalvavaliya-wordpress.svg"},
         {"name": "PostgreSQL", "icon": "icons/kevalvavaliya-postgresql.svg"},
         {"name": "CockroachDB", "icon": "icons/cockroachdb.svg"},
+        
+        
     ]
 
     # social-links
