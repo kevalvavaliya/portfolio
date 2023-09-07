@@ -102,6 +102,15 @@ def index(request):
         },
         {
             "id": "03",
+            "name": "OpenSort's site",
+            "github": "https://github.com/rajmahadev8/OpenSort",
+            "live": "https://www.opensort.io/",
+            "projectimg": "image/project/kevalvavaliya-opensort.png",
+            "tech": "#HTML #CSS #JS #JQUERY",
+            "desc": "Designed and developed the website for a dynamic startup committed to family empowerment.",
+        },
+        {
+            "id": "04",
             "name": "Bauddhik-Geeks Portfolio",
             "github": "https://github.com/Bauddhik-Geeks/Bauddhik-Geeks.github.io",
             "live": "https://bauddhikgeeks.co/",
@@ -110,7 +119,7 @@ def index(request):
             "desc": "Awesome Community Portfolio website for Bauddhik-Geeks community",
         },
         {
-            "id": "04",
+            "id": "05",
             "name": "Connect",
             "github": "https://github.com/abhigoyani/connect1",
             "projectimg": "image/project/kevalvavaliya-connect.png",
@@ -118,7 +127,7 @@ def index(request):
             "desc": "Connect connects audiences to all of your content with just one click.It is an open source alternative to linkrtree implemented in javscript and flask",
         },
         {
-            "id": "05",
+            "id": "06",
             "name": "Goverdhan Institute site",
             "github": "https://github.com/kevalvavaliya/Goverdhan-infotech",
             "projectimg": "image/project/kevalvavaliya-goverdhan.png",
@@ -126,7 +135,7 @@ def index(request):
             "desc": "Education site for goverdhan institute that manages the courses and events online which makes student easy to reach them.",
         },
         {
-            "id": "06",
+            "id": "07",
             "name": "We-Donate",
             "github": "https://github.com/kevalvavaliya/We-Donate",
             "projectimg": "image/project/kevalvavaliya-wedonate.png",
@@ -134,7 +143,7 @@ def index(request):
             "desc": "We-Donate aims in bringing digitization in donation.we donate delivers your donation to the right hands and provides home pickup services.",
         },
         {
-            "id": "07",
+            "id": "08",
             "name": "Localens",
             "github": "https://github.com/kevalvavaliya/Localens",
             "projectimg": "image/project/kevalvavaliya-localens.png",
@@ -142,7 +151,7 @@ def index(request):
             "desc": "Localens is an android app for finding local beauty spots in your localities and get them capture in the app and take it to the world",
         },
         {
-            "id": "08",
+            "id": "09",
             "name": "Vishvas Fabrics Ecommerce site",
             "github": "https://github.com/kevalvavaliya/E-commerce-site",
             "projectimg": "image/project/kevalvavaliya-vishvas.png",
@@ -150,7 +159,7 @@ def index(request):
             "desc": "A basic ecommerce site for vishvas fabrics",
         },
         {
-            "id": "09",
+            "id": "10",
             "name": "Sachivato news and blog site",
             "projectimg": "image/project/itemcover.png",
             "tech": "#WORDPRESS #DIGITALOCEAN",
