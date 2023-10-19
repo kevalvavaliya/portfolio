@@ -21,7 +21,7 @@
     <meta name="twitter:image" itemProp="image" content="{% static 'image/kevalmeta.png'%}"/>
 
 
-    
+    <link rel="canonical" href="https://kevalvavaliya.tech/"/>
     <link rel="icon" type="image/x-icon" href="{% static 'image/favicon.ico'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -277,7 +277,7 @@
                             <span>About Me</span>
                         </div>
                         <div class="about-image">
-                            <img src="/static/{{aboutimage}}">
+                            <img src="/static/{{aboutimage}}" alt="Keval Vavaliya">
                             <div class="bottom-text-slider"></div>
                         </div>
                     </div>
@@ -411,7 +411,7 @@
                                 {% for skill in skills %}
                                 <div class="skill-item">
                                     <div class="skill-icon">
-                                        <img src="/static/{{skill.icon}}" height="100%" width="100%" />
+                                        <img src="/static/{{skill.icon}}" height="100%" width="100%" alt="{{skill.icon | cut:'icons/' | slice:':-4' }}"/>
                                     </div>
                                     <div class="skill-text">
                                         <span>{{skill.name}}</span>
@@ -551,7 +551,7 @@
                                     <div class="project-image-outer">
                                         <div class="project-image-inner">
                                             <div class="prj-image">
-                                                <img src="/static/{{project.projectimg}}" />
+                                                <img src="/static/{{project.projectimg}}" alt="{{project.projectimg | cut:'image/project/' | slice:':-3' }}"/>
                                                 {% if project.winner %}
                                                 {% if project.devpost %}
                                                 <a href={{project.devpost}}>
@@ -582,7 +582,7 @@
             <div class="contact-container" data-aos="fade-up" data-aos-duration="1000" id="contact">
                 <div class="contact-container-inner">
                     <div class="contact-hand" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                        <img src="{% static 'image/footer-rock.png' %}">
+                        <img src="{% static 'image/footer-rock.png' %}" alt="kevalvavaliya Developer">
                     </div>
 
                     <div class="contact-me-outer">
