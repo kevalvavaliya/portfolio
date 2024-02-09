@@ -121,7 +121,7 @@ def index(request):
             "id": "05",
             "name": "Bauddhik-Geeks Portfolio",
             "github": "https://github.com/Bauddhik-Geeks/Bauddhik-Geeks.github.io",
-            "live": "https://bauddhikgeeks.co/",
+            "live": "https://bauddhik-geeks.github.io/",
             "projectimg": "image/project/kevalvavaliya-bauddhik.png",
             "tech": "#HTML #CSS #JS #JQUERY",
             "desc": "Awesome Community Portfolio website for Bauddhik-Geeks community",
