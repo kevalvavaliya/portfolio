@@ -15,34 +15,33 @@ def index(request):
     # about
     data[
         "aboutpara1"
-    ] = "I’m Keval, a Software Developer from Surat, India.I am Currently pursuing Bachelor of Engineering in Information Technology at LDCE, I consider myself as a maker of things, who solves user-problems using technology. My interests and skills extend to  Mobile apps development,Backend systems and Machine Learning, allowing me to explore the realms of intelligent systems and architecting efficient solutions."
+    ] = "I’m Keval, a Software Engineer from Surat, India. I consider myself as a maker of things, who solves user problems using technology. I am passionate about Mobile Apps, Backend Systems, and System Architectures."
     data[
         "aboutpara2"
-    ] = "I like to work with new tools and technologies,I’m always down for hearing about new projects, so feel free to drop me a line."
+    ] = "Today, I am a Software Engineer at Posha (Formerly Nymble), contributing across multiple teams, where I leverage my expertise in Flutter for mobile apps and Java for building native mobile api's and Scalable backend systems. My work involves collaborating with cross-functional teams to design, implement, and optimize solutions that drive innovation and improve user experiences. I’m always down for hearing about new opportunities, so feel free to drop me a line."
     data["aboutimage"] = "image/kevalvavaliya.jpeg"
 
     # my journey (can have max 4 only)
     data["journey1"] = {
-        "startyear": "2018",
+        "startyear": "2021",
         "endyear": "",
-        "desc": "Completed Secondary school at Gajera International School,Surat",
-    }
-    data["journey2"] = {
-        "startyear": "2018-",
-        "endyear": "2021",
         "desc": "Joined Diploma in Information Technology,at SSGCET , Surat",
     }
-    data["journey3"] = {
+    data["journey2"] = {
         "startyear": "2021",
         "endyear": "2023",
         "desc": "Bachelor in I.T, at LDCE,Hackathons, built projects like Yog4life and Plastidive",
     }
-    data["journey4"] = {
+    data["journey3"] = {
         "startyear": "2023-",
-        "endyear": "Present",
+        "endyear": "2024",
         "desc": "Gained experience by working at startups like Discoze,Opensort and Kwiktech",
     }
-
+    data["journey4"] = {
+        "startyear": "2024-",
+        "endyear": "Present",
+        "desc": "Contributing as a Software Engineer at Posha (Formerly Nymble)",
+    }
     # my skills
     data["skills"] = [
         {"name": "Android", "icon": "icons/kevalvavaliya-android.svg"},
@@ -73,7 +72,7 @@ def index(request):
     # social-links
     data["social_links"] = [
         {"name": "Github", "socialURL": "https://github.com/kevalvavaliya"},
-        {"name": "Twitter", "socialURL": "https://twitter.com/keval_vavaliya"},
+        {"name": "Twitter", "socialURL": "https://x.com/keval_vavaliya"},
         {"name": "Linkedin", "socialURL": "https://www.linkedin.com/in/kevalvavaliya/"},
         {"name": "Instagram", "socialURL": "https://www.instagram.com/kevalvavliya/"},
     ]
