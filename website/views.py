@@ -5,6 +5,11 @@ from django.http import HttpResponse
 data = {}
 
 
+def ping(request):
+    """Simple ping endpoint to check if server is up"""
+    return render(request, "ping.html")
+
+
 def index(request):
     global data
 
@@ -15,7 +20,7 @@ def index(request):
     # about
     data[
         "aboutpara1"
-    ] = "I’m Keval, a Software Engineer from Surat, India. I consider myself as a maker of things, who solves user problems using technology. I am passionate about Mobile Apps, Backend Systems, and System Architectures."
+    ] = "I’m Keval, a Software Engineer from Bangalore, India. I consider myself as a maker of things, who solves user problems using technology. I am passionate about Mobile Apps, Backend Systems, and System Architectures."
     data[
         "aboutpara2"
     ] = "Today, I am a Software Engineer at Posha (Formerly Nymble), contributing across multiple teams, where I leverage my expertise in Flutter for mobile apps and Java for building native mobile api's and Scalable backend systems. My work involves collaborating with cross-functional teams to design, implement, and optimize solutions that drive innovation and improve user experiences. I’m always down for hearing about new opportunities, so feel free to drop me a line."

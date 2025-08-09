@@ -2,3 +2,4 @@
 /website/.DS_Store
 /website/migrations/
 /protfolio/__pycache__/
+.venv/

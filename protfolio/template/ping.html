@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+
+    <head>
+        <title>Keval vavaliya </title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .resume-outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            cursor: pointer !important;
+
+        }
+       
+      </style>    
+    </head>
+    <body>
+        <div class="top-text"><span>Booted, suited, and computed...🚀 </span></div>
+         <div class="resume-outer">
+            <div class="resume-inner" onclick="window.location.href='/'">
+                <span>GO HOME</span>
+            </div>
+        </div>
+    </body>
+    </html>

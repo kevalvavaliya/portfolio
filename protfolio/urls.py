@@ -14,15 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from website import views
 from django.conf import settings  # new
 from django.conf.urls.static import static  # new
 from django.urls import path, include  # new
 from django.views.static import serve
+from django.shortcuts import redirect
+
+
+def redirect_to_index(request, path=''):
+    """Redirect any unmatched URL to the index page"""
+    return redirect('index')
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.index, name="index"),
+    path("ping/", views.ping, name="ping"),
+    # Catch-all patterns - must be last
+    re_path(r'^.*/$', redirect_to_index, name='catch_all_slash'),
+    re_path(r'^.+$', redirect_to_index, name='catch_all_no_slash'),
 ]
