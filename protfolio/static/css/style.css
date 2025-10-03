@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-
-
-@font-face {
-    font-family: NoeDisplay;
-    src: url(../fonts/NoeDisplay-Bold.ttf);
-    font-weight: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,700&display=swap');
 
 @font-face {
     font-family: Anurati;
@@ -1123,7 +1116,7 @@ p:nth-child(2) {
 }
 
 .project-text-number {
-    font-family: 'NoeDisplay';
+    font-family: 'Playfair';
     font-size: 32px;
     display: flex;
     gap: 10px;
